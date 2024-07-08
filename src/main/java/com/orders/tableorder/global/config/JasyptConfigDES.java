@@ -1,4 +1,4 @@
-package com.orders.tableorder.config;
+package com.orders.tableorder.global.config;
 
 import org.jasypt.encryption.StringEncryptor;
 import org.jasypt.encryption.pbe.PooledPBEStringEncryptor;
@@ -12,7 +12,7 @@ import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties
 @EnableEncryptableProperties
 public class JasyptConfigDES {
 
-    @Bean("jasyptEncryptor")
+    @Bean(name = "jasyptEncryptor")
     public StringEncryptor stringEncryptor(){
 
         PooledPBEStringEncryptor encryptor = new PooledPBEStringEncryptor();
